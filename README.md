@@ -7,13 +7,15 @@ This is a toy implementation of Bloom Filter.
 
 The Server can be used to test the BloomFilter. 
 1. Run  `python3 bloom_filter_server.py`
-2. Add data using POST (check the method for sample request)
-
-    `curl --location --request POST 'localhost:8000' \
+2. Add data using POST
+```
+    curl --location --request POST 'localhost:8000' \
             --header 'Content-Type: application/json' \
             --data-raw '{
                 "data": "example data"
-            }'`
-3. Check data using GET (check the method for sample request)
-
-    `curl --location --request GET 'localhost:8000?data=example%20data'`
+            }'
+```
+3. Check data using GET
+```
+    curl --location --request GET 'localhost:8000?data=example%20data'
+```
