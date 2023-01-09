@@ -50,7 +50,7 @@ class BloomFilter:
 
         self.bitvec = [0 for _ in range(self.vector_len)]    # ideally to use BitVector here (libs like bitarray)
 
-    def add(self, data):
+    def add(self, data: str) -> None:
         """
             Allows addition of data in str format
         """
@@ -58,7 +58,7 @@ class BloomFilter:
             hash_val = self._generate_hash_func(n)(data) % self.vector_len
             self.bitvec[hash_val] = 1
 
-    def contains(self, data) -> bool:
+    def contains(self, data: str) -> bool:
         """
             Checks whether data is present or not
                 - if False, data is not present with 100% probability
